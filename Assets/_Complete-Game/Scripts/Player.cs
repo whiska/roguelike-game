@@ -173,16 +173,16 @@ namespace Completed
 
             if (component is Enemy)
             {
-                Debug.Log("Hit enemy");
+                
                 Enemy enemy = component as Enemy;
-                enemy.DamageEnemy(enemyDamage);
-                animator.SetTrigger("playerHit");
+                enemy.DamageEnemy(enemyDamage, transform);
+                animator.SetTrigger("playerChop");
 
             }
 
             if (component is Wall)
             {
-                Debug.Log("Hit wall");
+                
                 Wall hitWall = component as Wall;
                 hitWall.DamageWall(wallDamage);
                 animator.SetTrigger("playerChop");
